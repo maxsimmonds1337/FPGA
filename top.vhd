@@ -13,11 +13,22 @@ entity TOP is
 		--reset			:	in	STD_LOGIC;		-- SW5 (J17)
 
 		--outputs
-		HS_top			:	out	STD_LOGIC		-- Horiontal sync
-		--VS_top			:	out	STD_LOGIC;		-- Virticle sync
-		--R_out_top		:	out	STD_LOGIC;		-- Red signal out
-		--G_out_top		:	out	STD_LOGIC;		-- Green signal out
-		--B_out_top		:	out	STD_LOGIC		-- Blue signal out
+		HS_top			:	out	STD_LOGIC;		-- Horiontal sync
+		VS_top			:	out	STD_LOGIC;		-- Virticle sync
+		R0_top			:	out	STD_LOGIC;		-- Red bit 1
+		R1_top			:	out	STD_LOGIC;		-- Red bit 1
+		R2_top			:	out	STD_LOGIC;		-- Red bit 1
+		R3_top			:	out	STD_LOGIC;		-- Red bit 1
+
+		G0_top			:	out	STD_LOGIC;		-- Red bit 1
+		G1_top			:	out	STD_LOGIC;		-- Red bit 1
+		G2_top			:	out	STD_LOGIC;		-- Red bit 1
+		G3_top			:	out	STD_LOGIC;		-- Red bit 1
+
+		B0_top			:	out	STD_LOGIC;		-- Red bit 1
+		B1_top			:	out	STD_LOGIC;		-- Red bit 1
+		B2_top			:	out	STD_LOGIC;		-- Red bit 1
+		B3_top			:	out	STD_LOGIC		-- Red bit 1
 	);
 end TOP;
 
@@ -36,7 +47,22 @@ architecture BEHAVIORAL of TOP is
 			pixel_clk	:	in	STD_LOGIC;		-- pixel clock, this is at 25.175MH
 
 			--outputs
-			hsync		:	out	STD_LOGIC		-- horizontal sync
+			hsync		:	out	STD_LOGIC;		-- horizontal sync
+			vsync		:	out	STD_LOGIC;		-- virtcle sync
+			R0			:	out	STD_LOGIC;		-- Red bit 1
+			R1			:	out	STD_LOGIC;		-- Red bit 1
+			R2			:	out	STD_LOGIC;		-- Red bit 1
+			R3			:	out	STD_LOGIC;		-- Red bit 1
+
+			G0			:	out	STD_LOGIC;		-- Red bit 1
+			G1			:	out	STD_LOGIC;		-- Red bit 1
+			G2			:	out	STD_LOGIC;		-- Red bit 1
+			G3			:	out	STD_LOGIC;		-- Red bit 1
+
+			B0			:	out	STD_LOGIC;		-- Red bit 1
+			B1			:	out	STD_LOGIC;		-- Red bit 1
+			B2			:	out	STD_LOGIC;		-- Red bit 1
+			B3			:	out	STD_LOGIC		-- Red bit 1
 		);
 	end component;
 
@@ -48,7 +74,23 @@ begin
 				pixel_clk => pixel_clk,
 
 				--outputs
-				hsync => HS_top
+				hsync => HS_top,
+				vsync => VS_top,
+				
+				R0 => R0_top,
+				R1 => R1_top,
+				R2 => R2_top,
+				R3 => R3_top,
+				
+				G0 => G0_top,
+				G1 => G1_top,
+				G2 => G2_top,
+				G3 => G3_top,
+				
+				B0 => B0_top,
+				B1 => B1_top,
+				B2 => B2_top,
+				B3 => B3_top
 			);
 	
 
