@@ -25,15 +25,25 @@ architecture BEHAVIORAL of top_tb is
 	component top is
 		port(
 			--inputs
-			pixel_clk		:	in	STD_LOGIC;		-- Clock in  (25.175 MHz) on P26
-			--reset			:	in	STD_LOGIC;		-- SW5 (J17)
+			pixel_clk	:	in	STD_LOGIC;		-- pixel clock, this is at 25.175MH
 
 			--outputs
-			HS_top			:	out	STD_LOGIC		-- Horiontal sync
-			--VS_top			:	out	STD_LOGIC;		-- Virticle sync
-			--R_out_top		:	out	STD_LOGIC;		-- Red signal out
-			--G_out_top		:	out	STD_LOGIC;		-- Green signal out
-			--B_out_top		:	out	STD_LOGIC		-- Blue signal out
+			hsync		:	out	STD_LOGIC;		-- horizontal sync
+			vsync		:	out	STD_LOGIC;		-- virtcle sync
+			R0			:	out	STD_LOGIC;		-- Red bit 1
+			R1			:	out	STD_LOGIC;		-- Red bit 1
+			R2			:	out	STD_LOGIC;		-- Red bit 1
+			R3			:	out	STD_LOGIC;		-- Red bit 1
+
+			G0			:	out	STD_LOGIC;		-- Red bit 1
+			G1			:	out	STD_LOGIC;		-- Red bit 1
+			G2			:	out	STD_LOGIC;		-- Red bit 1
+			G3			:	out	STD_LOGIC;		-- Red bit 1
+
+			B0			:	out	STD_LOGIC;		-- Red bit 1
+			B1			:	out	STD_LOGIC;		-- Red bit 1
+			B2			:	out	STD_LOGIC;		-- Red bit 1
+			B3			:	out	STD_LOGIC		-- Red bit 1
 		);
 	end component top;
  
@@ -42,14 +52,26 @@ architecture BEHAVIORAL of top_tb is
 
 		TOP_p: top
 			PORT MAP (
-				pixel_clk => clk_tb,
-				--reset => reset_tb,
+			--inputs
+			pixel_clk	
 
-				HS_top => HS_top_tb
-				--VS_top => VS_top_tb,
-				--R_out_top => R_out_top_tb,
-				--G_out_top => G_out_top_tb,
-				--B_out_top => B_out_top_tb
+			--outputs
+			hsync	
+			vsync		
+			R0			
+			R1			
+			R2			
+			R3			
+
+			G0			
+			G1			
+			G2			
+			G3			
+
+			B0			
+			B1		
+			B2			
+			B3		
 			);
 
 end BEHAVIORAL;
